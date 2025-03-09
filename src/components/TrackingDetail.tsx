@@ -17,7 +17,7 @@ interface TrackingDetailProps {
 }
 
 export default function TrackingDetail({ device, onClose }: TrackingDetailProps) {
-  const [L, setL] = useState<any>(null);
+  const [L, setL] = useState<typeof import("leaflet") | null>(null);
 
   useEffect(() => {
     import("leaflet").then((leaflet) => {
