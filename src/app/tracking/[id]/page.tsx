@@ -25,7 +25,7 @@ export default function TrackingDetailPage() {
   const [device, setDevice] = useState<TrackingData | null>(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/tracking/${id}/`) // Pastikan API benar
+    fetch(`https://be-tracking-production.up.railway.app/api/tracking/${id}/`) // Pastikan API benar
       .then(res => res.json())
       .then(data => setDevice(data))
       .catch(err => console.error("Gagal fetch data:", err));

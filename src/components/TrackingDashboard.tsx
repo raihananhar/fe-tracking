@@ -22,7 +22,7 @@ export default function TrackingDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/tracking/")
+    fetch("https://be-tracking-production.up.railway.app/api/tracking/")
       .then((res) => res.json())
       .then((data) => {
         console.log("Data dari API:", data); // 🔍 Debugging
